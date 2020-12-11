@@ -78,7 +78,9 @@
                   </div>
                   <div id="progressBar" class="flex flex-row items-center">
                     <div class="w-full">
-                      <div class="bg-gray-200 dark:bg-blue-gray-700 rounded-full">
+                      <div
+                        class="bg-gray-200 dark:bg-blue-gray-700 rounded-full"
+                      >
                         <div
                           class="w-3/12 bg-green-500 py-1 rounded-full"
                         ></div>
@@ -153,7 +155,9 @@
                     class="flex flex-row items-center w-full"
                   >
                     <div class="w-full">
-                      <div class="bg-gray-200 dark:bg-blue-gray-700 rounded-full">
+                      <div
+                        class="bg-gray-200 dark:bg-blue-gray-700 rounded-full"
+                      >
                         <div
                           class="w-3/12 bg-green-500 py-1 rounded-full"
                         ></div>
@@ -752,13 +756,13 @@
                   <div class="space-y-3">
                     <div
                       id="6x6grid"
-                      class="mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-3"
+                      class="mx-auto grid sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-3"
                     >
                       <div
                         id="halfcard"
-                        class="rounded-lg bg-blue-gray-100 dark:bg-blue-gray-800 p-2 min-h-20 flex flex-col items-center"
+                        class="rounded-lg bg-blue-gray-100 dark:bg-blue-gray-800 space-y-4 p-2 min-h-20 flex flex-col items-center"
                       >
-                        <div class="flex flex-row justify-between pb-2">
+                        <div class="flex flex-row justify-between w-full">
                           <span class="font-semibold text-sm">Mash Sensor</span>
                           <div class="text-green-600">
                             <svg
@@ -779,9 +783,9 @@
                         </div>
                         <div
                           id="Main Sensor Value"
-                          class="flex flex-row space-x-2 items-center"
+                          class="flex flex-row items-center"
                         >
-                          <div id="icon">
+                          <div id="icon" class="pr-2">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               class="h-7 w-7"
@@ -804,11 +808,33 @@
                             </svg>
                           </div>
                           <div class="text-3xl font-bold">
-                            <span>67</span> <span>&#8451;</span>
+                            <span>67,3</span><span>&#8451;</span>
                           </div>
                         </div>
-                        <div class="flex-wrap">Top row</div>
-                        <div>Top row</div>
+
+                        <div
+                          class="w-full mx-auto grid sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-1 text-xs"
+                        >
+                          <div
+                            class="font-semibold"
+                          >
+                            <span>Target:</span>
+                            <div><span class="font-extrabold">72,3</span><span>&#8451;</span></div>
+                          </div>
+                          <div
+                            class=""
+                          >
+                            <span>Diff:</span>
+                            <div><span>2,1</span><span>&#8451;</span></div>
+                          </div>
+
+                          <div
+                            class=""
+                          >
+                            <span>RoC:</span>
+                            <div><span>1,27</span><span>&#8451;/min</span></div>
+                          </div>
+                        </div>
                       </div>
                       <div
                         id="halfcard"
@@ -817,10 +843,16 @@
                         This is another half width card
                       </div>
                     </div>
-                    <div id="fullcard" class="rounded-lg bg-blue-gray-100 dark:bg-blue-gray-800 h-20">
+                    <div
+                      id="fullcard"
+                      class="rounded-lg bg-blue-gray-100 dark:bg-blue-gray-800 h-20"
+                    >
                       This is a full width card
                     </div>
-                    <div id="fullcard" class="rounded-lg bg-blue-gray-100 dark:bg-blue-gray-800 h-20">
+                    <div
+                      id="fullcard"
+                      class="rounded-lg bg-blue-gray-100 dark:bg-blue-gray-800 h-20"
+                    >
                       This is another full width card
                     </div>
                   </div>
