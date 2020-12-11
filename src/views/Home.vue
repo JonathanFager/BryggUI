@@ -1,7 +1,7 @@
 <template>
   <main class="" :class="{ ' dark ': toggleDarkMode }">
     <div
-      class="bg-blue-gray-100 dark:bg-blue-gray-800 w-full dark:text-gray-100 text-gray-700 pb-96"
+      class="bg-blue-gray-100 dark:bg-darkTrueGray w-full dark:text-gray-100 text-gray-700 pb-96"
     >
       <div
         id="Navbar"
@@ -9,39 +9,64 @@
       >
         <h4 class="text-xl font-bold leading-tight">BryggIO</h4>
         <div class="flex flex-row space-x-4">
-        <button @click="toggleDarkMode = !toggleDarkMode">
-          <svg v-if="toggleDarkMode" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
-          
-          <svg v-else class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+          <button @click="toggleDarkMode = !toggleDarkMode">
+            <svg
+              v-if="toggleDarkMode"
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+              ></path>
+            </svg>
 
-        </button>
-        <button
-          class="flex flex-row transition focus:outline-none duration-150 ease-in-out hover:bg-indigo-400 border border-white rounded px-8 py-2 text-sm"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            stroke="currentColor"
-            class="w-5 h-5"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            <svg
+              v-else
+              class="w-6 h-6"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+              ></path>
+            </svg>
+          </button>
+          <button
+            class="flex flex-row transition focus:outline-none duration-150 ease-in-out hover:bg-indigo-400 border border-white rounded px-8 py-2 text-sm"
           >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path
-              d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
-            />
-          </svg>
-          <span class="pl-2">Github</span>
-        </button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              stroke="currentColor"
+              class="w-5 h-5"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
+              />
+            </svg>
+            <span class="pl-2">Github</span>
+          </button>
         </div>
       </div>
 
       <div class="container space-y-4 mx-auto">
         <div id="Overview" class="flex flex-wrap">
           <div class="w-full">
-            <div class="rounded-xl bg-white dark:bg-blue-gray-900 p-4 shadow-lg py-4">
+            <div
+              class="rounded-xl bg-white dark:bg-blue-gray-900 p-4 shadow-lg py-4"
+            >
               <div class="flex flex-row w-full justify-between space-x-4">
                 <div
                   id="brewsstep"
@@ -53,7 +78,7 @@
                   </div>
                   <div id="progressBar" class="flex flex-row items-center">
                     <div class="w-full">
-                      <div class="bg-gray-200 rounded-full">
+                      <div class="bg-gray-200 dark:bg-blue-gray-700 rounded-full">
                         <div
                           class="w-3/12 bg-green-500 py-1 rounded-full"
                         ></div>
@@ -91,7 +116,7 @@
                   </div>
                 </div>
                 <div
-                  class="border h-16 my-auto border-gray-200 rounded-full"
+                  class="border h-16 my-auto border-gray-200 dark:border-blue-gray-700 rounded-full"
                 ></div>
                 <div
                   id="Description"
@@ -114,7 +139,9 @@
         </div>
         <div id="TODO" class="flex flex-wrap">
           <div class="w-full">
-            <div class="rounded-xl bg-white dark:bg-blue-gray-900 p-4 shadow-lg py-4">
+            <div
+              class="rounded-xl bg-white dark:bg-blue-gray-900 p-4 shadow-lg py-4"
+            >
               <div class="flex flex-col space-y-4">
                 <div class="flex flex-row space-x-4 w-4/12">
                   <div><span class="font-bold">TODO</span></div>
@@ -126,7 +153,7 @@
                     class="flex flex-row items-center w-full"
                   >
                     <div class="w-full">
-                      <div class="bg-gray-200 rounded-full">
+                      <div class="bg-gray-200 dark:bg-blue-gray-700 rounded-full">
                         <div
                           class="w-3/12 bg-green-500 py-1 rounded-full"
                         ></div>
@@ -139,7 +166,7 @@
                   class="flex flex-row space-x-8 overflow-x-hidden overflow-y-none"
                 >
                   <div
-                    class="bg-blue-gray-200 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
+                    class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
                   >
                     <span class="text-green-600"
                       ><svg
@@ -160,7 +187,7 @@
                     <p class="text-sm">Card body text</p>
                   </div>
                   <div
-                    class="bg-blue-gray-200 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
+                    class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
                   >
                     <span class="text-gray-400"
                       ><svg
@@ -182,7 +209,7 @@
                     <p class="text-sm">Card body text</p>
                   </div>
                   <div
-                    class="bg-blue-gray-200 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
+                    class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
                   >
                     <span class="text-gray-400"
                       ><svg
@@ -204,7 +231,7 @@
                     <p class="text-sm">Card body text</p>
                   </div>
                   <div
-                    class="bg-blue-gray-200 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
+                    class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
                   >
                     <span class="text-gray-400"
                       ><svg
@@ -226,7 +253,7 @@
                     <p class="text-sm">Card body text</p>
                   </div>
                   <div
-                    class="bg-blue-gray-200 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
+                    class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
                   >
                     <span class="text-gray-400"
                       ><svg
@@ -248,7 +275,7 @@
                     <p class="text-sm">Card body text</p>
                   </div>
                   <div
-                    class="bg-blue-gray-200 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
+                    class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
                   >
                     <span class="text-gray-400"
                       ><svg
@@ -270,7 +297,7 @@
                     <p class="text-sm">Card body text</p>
                   </div>
                   <div
-                    class="bg-blue-gray-200 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
+                    class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
                   >
                     <span class="text-gray-400"
                       ><svg
@@ -292,7 +319,7 @@
                     <p class="text-sm">Card body text</p>
                   </div>
                   <div
-                    class="bg-blue-gray-200 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
+                    class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
                   >
                     <span class="text-green-600"
                       ><svg
@@ -313,7 +340,7 @@
                     <p class="text-sm">Card body text</p>
                   </div>
                   <div
-                    class="bg-blue-gray-200 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
+                    class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
                   >
                     <span class="text-green-600"
                       ><svg
@@ -334,7 +361,7 @@
                     <p class="text-sm">Card body text</p>
                   </div>
                   <div
-                    class="bg-blue-gray-200 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
+                    class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
                   >
                     <span class="text-green-600"
                       ><svg
@@ -355,7 +382,7 @@
                     <p class="text-sm">Card body text</p>
                   </div>
                   <div
-                    class="bg-blue-gray-200 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
+                    class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
                   >
                     <span class="text-green-600"
                       ><svg
@@ -376,7 +403,7 @@
                     <p class="text-sm">Card body text</p>
                   </div>
                   <div
-                    class="bg-blue-gray-200 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
+                    class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
                   >
                     <span class="text-green-600"
                       ><svg
@@ -397,7 +424,7 @@
                     <p class="text-sm">Card body text</p>
                   </div>
                   <div
-                    class="bg-blue-gray-200 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
+                    class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
                   >
                     <span class="text-green-600"
                       ><svg
@@ -418,7 +445,7 @@
                     <p class="text-sm">Card body text</p>
                   </div>
                   <div
-                    class="bg-blue-gray-200 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
+                    class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
                   >
                     <span class="text-green-600"
                       ><svg
@@ -440,7 +467,7 @@
                     <p class="text-sm">Card body text</p>
                   </div>
                   <div
-                    class="bg-blue-gray-200 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
+                    class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
                   >
                     <span class="text-green-600"
                       ><svg
@@ -462,7 +489,7 @@
                     <p class="text-sm">Card body text</p>
                   </div>
                   <div
-                    class="bg-blue-gray-200 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
+                    class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
                   >
                     <span class="text-green-600"
                       ><svg
@@ -490,7 +517,9 @@
 
         <div id="chart" class="flex flex-wrap">
           <div class="w-full">
-            <div class="rounded-xl bg-white dark:bg-blue-gray-900 h-72 p-4 shadow-lg py-4">
+            <div
+              class="rounded-xl bg-white dark:bg-blue-gray-900 h-72 p-4 shadow-lg py-4"
+            >
               <!-- I warn you, dont open this div -->
               <div class="relative h-full overflow-y-hidden overflow-hidden">
                 <div
@@ -694,7 +723,9 @@
         <div
           class="mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4"
         >
-          <div class="rounded-xl bg-white dark:bg-blue-gray-900 p-4 shadow-lg py-4 flex flex-col">
+          <div
+            class="rounded-xl bg-white dark:bg-blue-gray-900 p-4 shadow-lg py-4 flex flex-col"
+          >
             <div id="CardHeader" class="flex flex-row justify-between">
               <span class="font-bold text-xl">Mash Kettle</span>
               <div class="text-green-600">
@@ -725,7 +756,7 @@
                     >
                       <div
                         id="halfcard"
-                        class="rounded-lg bg-blue-gray-100 p-2 min-h-20 flex flex-col items-center"
+                        class="rounded-lg bg-blue-gray-100 dark:bg-blue-gray-800 p-2 min-h-20 flex flex-col items-center"
                       >
                         <div class="flex flex-row justify-between pb-2">
                           <span class="font-semibold text-sm">Mash Sensor</span>
@@ -781,15 +812,15 @@
                       </div>
                       <div
                         id="halfcard"
-                        class="rounded-lg bg-blue-gray-100 h-20"
+                        class="rounded-lg bg-blue-gray-100 dark:bg-blue-gray-800 h-20"
                       >
                         This is another half width card
                       </div>
                     </div>
-                    <div id="fullcard" class="rounded-lg bg-blue-gray-100 h-20">
+                    <div id="fullcard" class="rounded-lg bg-blue-gray-100 dark:bg-blue-gray-800 h-20">
                       This is a full width card
                     </div>
-                    <div id="fullcard" class="rounded-lg bg-blue-gray-100 h-20">
+                    <div id="fullcard" class="rounded-lg bg-blue-gray-100 dark:bg-blue-gray-800 h-20">
                       This is another full width card
                     </div>
                   </div>
@@ -811,19 +842,23 @@
                   :class="{ 'bg-green-600': toggleActive }"
                 >
                   <div
-                    class="w-4 h-4 bg-white dark:bg-blue-gray-900 rounded-full shadow-lg transform duration-300 ease-in-out"
+                    class="w-4 h-4 bg-white rounded-full shadow-lg transform duration-300 ease-in-out"
                     :class="{
                       'translate-x-4': toggleActive,
-                      'bg-gray-400': !toggleActive,
+                      'bg-gray-400 dark:bg-gray-100': !toggleActive,
                     }"
                   ></div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="rounded-xl bg-white dark:bg-blue-gray-900 p-4 shadow-lg py-4"></div>
+          <div
+            class="rounded-xl bg-white dark:bg-blue-gray-900 p-4 shadow-lg py-4"
+          ></div>
 
-          <div class="rounded-xl bg-white dark:bg-blue-gray-900 p-4 shadow-lg py-4"></div>
+          <div
+            class="rounded-xl bg-white dark:bg-blue-gray-900 p-4 shadow-lg py-4"
+          ></div>
         </div>
       </div>
     </div>
