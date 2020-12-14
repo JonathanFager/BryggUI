@@ -8171,6 +8171,11 @@ table@^5.2.3:
     slice-ansi "^2.1.0"
     string-width "^3.0.0"
 
+tailwind-scrollbar@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/tailwind-scrollbar/-/tailwind-scrollbar-1.0.1.tgz#619f52d70a5669201538250b691eb3b206a79bb6"
+  integrity sha512-bOJ1zkUrLcdsvDuU2LtAUqhFIJL/QtKveaexIXKlC557l3jIuIUC03svn5GK5XzNUEK+xCBu625toXdywnw75g==
+
 tailwindcss@2.0.1-compat:
   version "2.0.1-compat"
   resolved "https://registry.npm.taobao.org/tailwindcss/download/tailwindcss-2.0.1-compat.tgz#2f57e9e4e848587bfc67ed92ee0de0882c3d0673"

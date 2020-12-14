@@ -191,7 +191,7 @@
                     class="bg-gradient-to-l from-white dark:from-blue-gray-900 w-6 right-0 absolute h-full"
                   ></div>
                   <div
-                    class="flex flex-row space-x-8 overflow-x-hidden overflow-y-none"
+                    class="flex flex-row h-full space-x-8 overflow-x-auto overflow-y-none pb-4" 
                   >
                     <div
                       class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
@@ -1127,3 +1127,29 @@ export default class Home extends Vue {
   private fullWidth = true;
 }
 </script>
+
+<style scoped>
+
+/* width */
+::-webkit-scrollbar {
+  height: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10vh;
+  display:none
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #DDD6FE;
+  border-radius: 10vh;
+  height: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #DDD6FE;
+}
+</style>
