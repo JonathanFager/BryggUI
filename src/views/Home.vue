@@ -1,6 +1,7 @@
 <template>
   <main class="" :class="{ ' dark ': toggleDarkMode }">
     <div
+      id="content"
       class="bg-blue-gray-100 dark:bg-darkTrueGray w-full dark:text-gray-100 text-gray-700 pb-96"
     >
       <div
@@ -38,6 +39,9 @@
               ></path>
             </svg>
           </button>
+          <button class="text-xs border px-2 rounded-lg" @click="toggleIssue">
+            Issue
+          </button>
           <button
             class="flex flex-row transition focus:outline-none duration-150 ease-in-out hover:bg-indigo-400 border border-white rounded px-8 py-2 text-sm"
           >
@@ -62,7 +66,7 @@
       </div>
 
       <div class="container space-y-4 mx-auto">
-        <div id="Overview" class="flex flex-wrap">
+        <div id="overview" class="flex flex-wrap">
           <div class="w-full">
             <div
               class="rounded-xl bg-white dark:bg-blue-gray-900 p-4 shadow-lg py-4"
@@ -144,7 +148,7 @@
             <div
               class="rounded-xl bg-white dark:bg-blue-gray-900 p-4 shadow-lg py-4"
             >
-              <div class="flex flex-col space-y-4">
+              <div class="flex flex-col space-y-4 relative">
                 <div class="flex flex-row space-x-4 w-4/12">
                   <div><span class="font-bold">TODO</span></div>
                   <div
@@ -166,352 +170,357 @@
                     <div class="pl-5 text-sm">3/12</div>
                   </div>
                 </div>
-                <div
-                  class="flex flex-row space-x-8 overflow-x-hidden overflow-y-none"
-                >
+                <div class="relative">
                   <div
-                    class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
-                  >
-                    <span class="text-green-600"
-                      ><svg
-                        class="w-6 h-6"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                        ></path></svg
-                    ></span>
-                    <span class="font-semibold">Todo 1</span>
-                    <p class="text-sm">Card body text</p>
-                  </div>
+                    class="bg-gradient-to-l from-white dark:from-blue-gray-900 w-6 right-0 absolute h-full"
+                  ></div>
                   <div
-                    class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
+                    class="flex flex-row space-x-8 overflow-x-hidden overflow-y-none"
                   >
-                    <span class="text-gray-400"
-                      ><svg
-                        class="w-6 h-6"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="1.75"
-                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 "
-                          clip-rule="evenodd"
-                        ></path></svg
-                    ></span>
-                    <span class="font-semibold">Todo 2</span>
-                    <p class="text-sm">Card body text</p>
-                  </div>
-                  <div
-                    class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
-                  >
-                    <span class="text-gray-400"
-                      ><svg
-                        class="w-6 h-6"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="1.75"
-                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 "
-                          clip-rule="evenodd"
-                        ></path></svg
-                    ></span>
-                    <span class="font-semibold">Todo 3</span>
-                    <p class="text-sm">Card body text</p>
-                  </div>
-                  <div
-                    class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
-                  >
-                    <span class="text-gray-400"
-                      ><svg
-                        class="w-6 h-6"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="1.75"
-                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 "
-                          clip-rule="evenodd"
-                        ></path></svg
-                    ></span>
-                    <span class="font-semibold">Todo 4</span>
-                    <p class="text-sm">Card body text</p>
-                  </div>
-                  <div
-                    class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
-                  >
-                    <span class="text-gray-400"
-                      ><svg
-                        class="w-6 h-6"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="1.75"
-                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 "
-                          clip-rule="evenodd"
-                        ></path></svg
-                    ></span>
-                    <span class="font-semibold">Todo 6</span>
-                    <p class="text-sm">Card body text</p>
-                  </div>
-                  <div
-                    class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
-                  >
-                    <span class="text-gray-400"
-                      ><svg
-                        class="w-6 h-6"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="1.75"
-                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 "
-                          clip-rule="evenodd"
-                        ></path></svg
-                    ></span>
-                    <span class="font-semibold">Todo 7</span>
-                    <p class="text-sm">Card body text</p>
-                  </div>
-                  <div
-                    class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
-                  >
-                    <span class="text-gray-400"
-                      ><svg
-                        class="w-6 h-6"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="1.75"
-                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 "
-                          clip-rule="evenodd"
-                        ></path></svg
-                    ></span>
-                    <span class="font-semibold">Todo 8</span>
-                    <p class="text-sm">Card body text</p>
-                  </div>
-                  <div
-                    class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
-                  >
-                    <span class="text-green-600"
-                      ><svg
-                        class="w-6 h-6"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                        ></path></svg
-                    ></span>
-                    <span class="font-semibold">Todo 1</span>
-                    <p class="text-sm">Card body text</p>
-                  </div>
-                  <div
-                    class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
-                  >
-                    <span class="text-green-600"
-                      ><svg
-                        class="w-6 h-6"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                        ></path></svg
-                    ></span>
-                    <span class="font-semibold">Todo 1</span>
-                    <p class="text-sm">Card body text</p>
-                  </div>
-                  <div
-                    class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
-                  >
-                    <span class="text-green-600"
-                      ><svg
-                        class="w-6 h-6"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                        ></path></svg
-                    ></span>
-                    <span class="font-semibold">Todo 1</span>
-                    <p class="text-sm">Card body text</p>
-                  </div>
-                  <div
-                    class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
-                  >
-                    <span class="text-green-600"
-                      ><svg
-                        class="w-6 h-6"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                        ></path></svg
-                    ></span>
-                    <span class="font-semibold">Todo 1</span>
-                    <p class="text-sm">Card body text</p>
-                  </div>
-                  <div
-                    class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
-                  >
-                    <span class="text-green-600"
-                      ><svg
-                        class="w-6 h-6"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                        ></path></svg
-                    ></span>
-                    <span class="font-semibold">Todo 1</span>
-                    <p class="text-sm">Card body text</p>
-                  </div>
-                  <div
-                    class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
-                  >
-                    <span class="text-green-600"
-                      ><svg
-                        class="w-6 h-6"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                        ></path></svg
-                    ></span>
-                    <span class="font-semibold">Todo 1</span>
-                    <p class="text-sm">Card body text</p>
-                  </div>
-                  <div
-                    class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
-                  >
-                    <span class="text-green-600"
-                      ><svg
-                        class="w-6 h-6"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                        ></path>
-                      </svg>
-                    </span>
-                    <span class="font-semibold">Todo 1</span>
-                    <p class="text-sm">Card body text</p>
-                  </div>
-                  <div
-                    class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
-                  >
-                    <span class="text-green-600"
-                      ><svg
-                        class="w-6 h-6"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                        ></path>
-                      </svg>
-                    </span>
-                    <span class="font-semibold">Todo 1</span>
-                    <p class="text-sm">Card body text</p>
-                  </div>
-                  <div
-                    class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
-                  >
-                    <span class="text-green-600"
-                      ><svg
-                        class="w-6 h-6"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                        ></path></svg
-                    ></span>
-                    <span class="font-semibold">Todo 1</span>
-                    <p class="text-sm">Card body text</p>
+                    <div
+                      class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
+                    >
+                      <span class="text-green-600"
+                        ><svg
+                          class="w-6 h-6"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                          ></path></svg
+                      ></span>
+                      <span class="font-semibold">Todo 1</span>
+                      <p class="text-sm">Card body text</p>
+                    </div>
+                    <div
+                      class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
+                    >
+                      <span class="text-gray-400"
+                        ><svg
+                          class="w-6 h-6"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.75"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 "
+                            clip-rule="evenodd"
+                          ></path></svg
+                      ></span>
+                      <span class="font-semibold">Todo 2</span>
+                      <p class="text-sm">Card body text</p>
+                    </div>
+                    <div
+                      class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
+                    >
+                      <span class="text-gray-400"
+                        ><svg
+                          class="w-6 h-6"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.75"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 "
+                            clip-rule="evenodd"
+                          ></path></svg
+                      ></span>
+                      <span class="font-semibold">Todo 3</span>
+                      <p class="text-sm">Card body text</p>
+                    </div>
+                    <div
+                      class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
+                    >
+                      <span class="text-gray-400"
+                        ><svg
+                          class="w-6 h-6"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.75"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 "
+                            clip-rule="evenodd"
+                          ></path></svg
+                      ></span>
+                      <span class="font-semibold">Todo 4</span>
+                      <p class="text-sm">Card body text</p>
+                    </div>
+                    <div
+                      class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
+                    >
+                      <span class="text-gray-400"
+                        ><svg
+                          class="w-6 h-6"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.75"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 "
+                            clip-rule="evenodd"
+                          ></path></svg
+                      ></span>
+                      <span class="font-semibold">Todo 6</span>
+                      <p class="text-sm">Card body text</p>
+                    </div>
+                    <div
+                      class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
+                    >
+                      <span class="text-gray-400"
+                        ><svg
+                          class="w-6 h-6"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.75"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 "
+                            clip-rule="evenodd"
+                          ></path></svg
+                      ></span>
+                      <span class="font-semibold">Todo 7</span>
+                      <p class="text-sm">Card body text</p>
+                    </div>
+                    <div
+                      class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
+                    >
+                      <span class="text-gray-400"
+                        ><svg
+                          class="w-6 h-6"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.75"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 "
+                            clip-rule="evenodd"
+                          ></path></svg
+                      ></span>
+                      <span class="font-semibold">Todo 8</span>
+                      <p class="text-sm">Card body text</p>
+                    </div>
+                    <div
+                      class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
+                    >
+                      <span class="text-green-600"
+                        ><svg
+                          class="w-6 h-6"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                          ></path></svg
+                      ></span>
+                      <span class="font-semibold">Todo 1</span>
+                      <p class="text-sm">Card body text</p>
+                    </div>
+                    <div
+                      class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
+                    >
+                      <span class="text-green-600"
+                        ><svg
+                          class="w-6 h-6"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                          ></path></svg
+                      ></span>
+                      <span class="font-semibold">Todo 1</span>
+                      <p class="text-sm">Card body text</p>
+                    </div>
+                    <div
+                      class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
+                    >
+                      <span class="text-green-600"
+                        ><svg
+                          class="w-6 h-6"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                          ></path></svg
+                      ></span>
+                      <span class="font-semibold">Todo 1</span>
+                      <p class="text-sm">Card body text</p>
+                    </div>
+                    <div
+                      class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
+                    >
+                      <span class="text-green-600"
+                        ><svg
+                          class="w-6 h-6"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                          ></path></svg
+                      ></span>
+                      <span class="font-semibold">Todo 1</span>
+                      <p class="text-sm">Card body text</p>
+                    </div>
+                    <div
+                      class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
+                    >
+                      <span class="text-green-600"
+                        ><svg
+                          class="w-6 h-6"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                          ></path></svg
+                      ></span>
+                      <span class="font-semibold">Todo 1</span>
+                      <p class="text-sm">Card body text</p>
+                    </div>
+                    <div
+                      class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
+                    >
+                      <span class="text-green-600"
+                        ><svg
+                          class="w-6 h-6"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                          ></path></svg
+                      ></span>
+                      <span class="font-semibold">Todo 1</span>
+                      <p class="text-sm">Card body text</p>
+                    </div>
+                    <div
+                      class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
+                    >
+                      <span class="text-green-600"
+                        ><svg
+                          class="w-6 h-6"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                          ></path>
+                        </svg>
+                      </span>
+                      <span class="font-semibold">Todo 1</span>
+                      <p class="text-sm">Card body text</p>
+                    </div>
+                    <div
+                      class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
+                    >
+                      <span class="text-green-600"
+                        ><svg
+                          class="w-6 h-6"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                          ></path>
+                        </svg>
+                      </span>
+                      <span class="font-semibold">Todo 1</span>
+                      <p class="text-sm">Card body text</p>
+                    </div>
+                    <div
+                      class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 flex-none items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
+                    >
+                      <span class="text-green-600"
+                        ><svg
+                          class="w-6 h-6"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                          ></path></svg
+                      ></span>
+                      <span class="font-semibold">Todo 1</span>
+                      <p class="text-sm">Card body text</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -756,11 +765,19 @@
                   <div class="space-y-3">
                     <div
                       id="6x6grid"
-                      class="mx-auto grid sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-3"
+                      class="mx-auto grid grid-cols-1 md:grid-cols-2 gap-3"
                     >
                       <div
-                        id="halfcard"
-                        class="rounded-lg bg-blue-gray-100 dark:bg-blue-gray-800 space-y-4 p-2 min-h-20 flex flex-col items-center"
+                        id="sensorCard"
+                        class="rounded-lg space-y-4 border-2 dark:bg-blue-gray-800 p-2 min-h-20 flex flex-col items-center"
+                        :class="{
+                          'col-span-full': fullWidth,
+                          'col-span-1': !fullwidth,
+                          'bg-blue-gray-100 border-transparent':
+                            issue === 1,
+                          'bg-yellow-100 border-yellow-400': issue === 2,
+                          'bg-red-100 border-red-600': issue === 3,
+                        }"
                       >
                         <div class="flex flex-row justify-between w-full">
                           <span class="font-semibold text-sm">Mash Sensor</span>
@@ -813,47 +830,222 @@
                         </div>
 
                         <div
-                          class="w-full mx-auto grid sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-1 text-xs"
+                          class="w-full text-xs justify-center mx-auto grid gap-x-1 gap-y-3"
+                          :class="{
+                            'grid-cols-3 sm:grid-cols-3': fullWidth,
+                            'grid-cols-2 sm:grid-cols-2': !fullWidth,
+                          }"
                         >
-                          <div
-                            class="font-semibold"
-                          >
-                            <span>Target:</span>
-                            <div><span class="font-extrabold">72,3</span><span>&#8451;</span></div>
+                          <div class="">
+                            <span class="font-normal">Target:</span>
+                            <div>
+                              <span class="font-extrabold">72,3</span
+                              ><span>&#8451;</span>
+                            </div>
                           </div>
-                          <div
-                            class=""
-                          >
+                          <div class="font-normal">
                             <span>Diff:</span>
-                            <div><span>2,1</span><span>&#8451;</span></div>
+                            <div>
+                              <span class="font-extrabold">2,1</span
+                              ><span>&#8451;</span>
+                            </div>
                           </div>
 
-                          <div
-                            class=""
-                          >
-                            <span>RoC:</span>
-                            <div><span>1,27</span><span>&#8451;/min</span></div>
+                          <div class="">
+                            <span class="font-normal">RoC:</span>
+                            <div>
+                              <span class="font-extrabold">1,27</span
+                              ><span>&#8451;/min</span>
+                            </div>
                           </div>
                         </div>
                       </div>
                       <div
-                        id="halfcard"
-                        class="rounded-lg bg-blue-gray-100 dark:bg-blue-gray-800 h-20"
+                        id="sensorCard"
+                        class="rounded-lg space-y-4 border-2 dark:bg-blue-gray-800 p-2 min-h-20 flex flex-col items-center"
+                        :class="{
+                          'col-span-full': fullWidth,
+                          'col-span-1': !fullwidth,
+                          'bg-blue-gray-100 border-transparent':
+                            issue === 1,
+                          'bg-yellow-100 border-yellow-400': issue === 2,
+                          'bg-red-100 border-red-600': issue === 3,
+                        }"
                       >
-                        This is another half width card
+                        <div class="flex flex-row justify-between w-full">
+                          <span class="font-semibold text-sm">Mash Sensor</span>
+                          <div class="text-green-600">
+                            <svg
+                              class="w-5 h-5"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                              ></path>
+                            </svg>
+                          </div>
+                        </div>
+                        <div
+                          id="Main Sensor Value"
+                          class="flex flex-row items-center"
+                        >
+                          <div id="icon" class="pr-2">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="h-7 w-7"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path
+                                stroke="none"
+                                d="M0 0h24v24H0z"
+                                fill="none"
+                              />
+                              <path
+                                d="M10 13.5a4 4 0 1 0 4 0v-8.5a2 2 0 0 0 -4 0v8.5"
+                              />
+                              <line x1="10" y1="9" x2="14" y2="9" />
+                            </svg>
+                          </div>
+                          <div class="text-3xl font-bold">
+                            <span>67,3</span><span>&#8451;</span>
+                          </div>
+                        </div>
+
+                        <div
+                          class="w-full text-xs justify-center mx-auto grid gap-x-1 gap-y-3"
+                          :class="{
+                            'grid-cols-3 sm:grid-cols-3': fullWidth,
+                            'grid-cols-2 sm:grid-cols-2': !fullWidth,
+                          }"
+                        >
+                          <div class="">
+                            <span class="font-normal">Target:</span>
+                            <div>
+                              <span class="font-extrabold">72,3</span
+                              ><span>&#8451;</span>
+                            </div>
+                          </div>
+                          <div class="font-normal">
+                            <span>Diff:</span>
+                            <div>
+                              <span class="font-extrabold">2,1</span
+                              ><span>&#8451;</span>
+                            </div>
+                          </div>
+
+                          <div class="">
+                            <span class="font-normal">RoC:</span>
+                            <div>
+                              <span class="font-extrabold">1,27</span
+                              ><span>&#8451;/min</span>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                    <div
-                      id="fullcard"
-                      class="rounded-lg bg-blue-gray-100 dark:bg-blue-gray-800 h-20"
-                    >
-                      This is a full width card
-                    </div>
-                    <div
-                      id="fullcard"
-                      class="rounded-lg bg-blue-gray-100 dark:bg-blue-gray-800 h-20"
-                    >
-                      This is another full width card
+                      <div
+                        id="sensorCard"
+                        class="rounded-lg space-y-4 border-2 dark:bg-blue-gray-800 p-2 min-h-20 flex flex-col items-center"
+                        :class="{
+                          'col-span-full': fullWidth,
+                          'col-span-1': !fullwidth,
+                          'bg-blue-gray-100 border-transparent':
+                            issue === 1,
+                          'bg-yellow-100 border-yellow-400': issue === 2,
+                          'bg-red-100 border-red-600': issue === 3,
+                        }"
+                      >
+                        <div class="flex flex-row justify-between w-full">
+                          <span class="font-semibold text-sm">Mash Sensor</span>
+                          <div class="text-green-600">
+                            <svg
+                              class="w-5 h-5"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                              ></path>
+                            </svg>
+                          </div>
+                        </div>
+                        <div
+                          id="Main Sensor Value"
+                          class="flex flex-row items-center"
+                        >
+                          <div id="icon" class="pr-2">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="h-7 w-7"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path
+                                stroke="none"
+                                d="M0 0h24v24H0z"
+                                fill="none"
+                              />
+                              <path
+                                d="M10 13.5a4 4 0 1 0 4 0v-8.5a2 2 0 0 0 -4 0v8.5"
+                              />
+                              <line x1="10" y1="9" x2="14" y2="9" />
+                            </svg>
+                          </div>
+                          <div class="text-3xl font-bold">
+                            <span>67,3</span><span>&#8451;</span>
+                          </div>
+                        </div>
+
+                        <div
+                          class="w-full text-xs justify-center mx-auto grid gap-x-1 gap-y-3"
+                          :class="{
+                            'grid-cols-3 sm:grid-cols-3': fullWidth,
+                            'grid-cols-2 sm:grid-cols-2': !fullWidth,
+                          }"
+                        >
+                          <div class="">
+                            <span class="font-normal">Target:</span>
+                            <div>
+                              <span class="font-extrabold">72,3</span
+                              ><span>&#8451;</span>
+                            </div>
+                          </div>
+                          <div class="font-normal">
+                            <span>Diff:</span>
+                            <div>
+                              <span class="font-extrabold">2,1</span
+                              ><span>&#8451;</span>
+                            </div>
+                          </div>
+
+                          <div class="">
+                            <span class="font-normal">RoC:</span>
+                            <div>
+                              <span class="font-extrabold">1,27</span
+                              ><span>&#8451;/min</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -908,5 +1100,17 @@ export default class Home extends Vue {
   private toggleActive = false;
 
   private toggleDarkMode = false;
+
+  private issue = 3;
+
+  toggleIssue() {
+    if (this.issue === 3) {
+      this.issue = 1;
+    } else {
+      this.issue += 1;
+    }
+  }
+
+  private fullWidth = true;
 }
 </script>
