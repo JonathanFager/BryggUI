@@ -5,15 +5,33 @@
       class="bg-blue-gray-100 dark:bg-darkTrueGray w-full dark:text-gray-100 text-gray-700 pb-96"
     >
       <div
+        class="w-full flex flex-row space-x-4 py-2 border-red-200 border-2 bg-gray-300"
+      >
+        <span>Admin bar:</span>
+        <button
+          class="border px-2 rounded-lg outline-none ring-0"
+          @click="toggleIssue"
+        >
+          Issue
+        </button>
+        <button class="border px-2 rounded-lg" @click="fullWidth = !fullWidth">
+          Half/Full-width
+        </button>
+      </div>
+
+      <div
         id="Navbar"
         class="px-6 py-2 mb-4 bg-white dark:bg-blue-gray-900 mx-auto flex flex-row items-center align-middle justify-between shadow-lg"
       >
         <h4 class="text-xl font-bold leading-tight">BryggIO</h4>
         <div class="flex flex-row space-x-4">
-          <button @click="toggleDarkMode = !toggleDarkMode">
+          <button
+            class="focus:outline-none focus:ring-0"
+            @click="toggleDarkMode = !toggleDarkMode"
+          >
             <svg
               v-if="toggleDarkMode"
-              class="w-6 h-6"
+              class="w-6 h-6 hover:text-purple-700"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -29,7 +47,7 @@
 
             <svg
               v-else
-              class="w-6 h-6"
+              class="w-6 h-6 hover:text-purple-700"
               fill="currentColor"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
@@ -39,9 +57,7 @@
               ></path>
             </svg>
           </button>
-          <button class="text-xs border px-2 rounded-lg" @click="toggleIssue">
-            Issue
-          </button>
+
           <button
             class="flex flex-row transition focus:outline-none duration-150 ease-in-out hover:bg-indigo-400 border border-white rounded px-8 py-2 text-sm"
           >
@@ -773,8 +789,7 @@
                         :class="{
                           'col-span-full': fullWidth,
                           'col-span-1': !fullwidth,
-                          'bg-blue-gray-100 border-transparent':
-                            issue === 1,
+                          'bg-blue-gray-100 border-transparent': issue === 1,
                           'bg-yellow-100 border-yellow-400': issue === 2,
                           'bg-red-100 border-red-600': issue === 3,
                         }"
@@ -866,8 +881,7 @@
                         :class="{
                           'col-span-full': fullWidth,
                           'col-span-1': !fullwidth,
-                          'bg-blue-gray-100 border-transparent':
-                            issue === 1,
+                          'bg-blue-gray-100 border-transparent': issue === 1,
                           'bg-yellow-100 border-yellow-400': issue === 2,
                           'bg-red-100 border-red-600': issue === 3,
                         }"
@@ -959,8 +973,7 @@
                         :class="{
                           'col-span-full': fullWidth,
                           'col-span-1': !fullwidth,
-                          'bg-blue-gray-100 border-transparent':
-                            issue === 1,
+                          'bg-blue-gray-100 border-transparent': issue === 1,
                           'bg-yellow-100 border-yellow-400': issue === 2,
                           'bg-red-100 border-red-600': issue === 3,
                         }"
