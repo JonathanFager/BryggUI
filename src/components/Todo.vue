@@ -12,7 +12,7 @@
                   <div class="w-3/12 bg-green-500 py-1 rounded-full"></div>
                 </div>
               </div>
-              <div class="pl-5 text-sm">3/12</div>
+              <div class="pl-5 text-sm">3/{{todos.length}}</div>
             </div>
           </div>
           <div class="relative">
@@ -21,7 +21,7 @@
             ></div>
             <div 
               class="flex flex-row h-full w-full space-x-6 overflow-x-auto overflow-y-none pb-4">
-                <div v-for="n in 24" :key="n" class="flex-none">
+                <div v-for="n in todos.length" :key="n" class="flex-none">
                     <Todocard />
                 </div>
             </div>
@@ -54,6 +54,7 @@ export default class Todo extends Vue {
     return !this.isDarkmode;
   }
 */
+    private todos = [1,2,3,4,5,6,7,8,9,10]
 } 
 </script>
 <style scoped>
