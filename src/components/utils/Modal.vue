@@ -10,9 +10,9 @@
           <div class="p-6">
             <p class="">body content here</p>
           </div>
-          <div class="p-6 flex justify-end items-center">
+          <div class="p-6 flex justify-end space-x-4 items-center">
             <button class="" @click="emitCancel">Cancel</button>
-            <button class="" @click="emitConfirm">Cancel</button>
+            <button class="" @click="emitConfirm">Confirm</button>
           </div>
         </div>
       </div>

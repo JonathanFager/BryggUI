@@ -2,7 +2,7 @@
   <Modal
     :isVisible="modalVisible"
     @cancel="modalVisible = false"
-    @confirm="modalVisible = false"
+    @confirm="toggleCompleted"
   />
   <div
     @click="modalVisible = true"
@@ -72,7 +72,8 @@ export default class Todocard extends Vue {
   private modalVisible = false;
 
   private toggleCompleted(): void {
-    this.completed = !this.completed;
+    this.completed = true;
+    this.modalVisible = false;
   }
 }
 </script>

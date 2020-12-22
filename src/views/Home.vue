@@ -1,8 +1,8 @@
 <template>
-  <main class="h-screen" :class="{ ' dark ': toggleDarkMode }">
+  <main class="h-full" :class="{ ' dark ': toggleDarkMode }">
     <div
       id="content"
-      class="bg-blue-gray-100 font-sans dark:bg-darkTrueGray w-full dark:text-gray-100 text-gray-700 h-full"
+      class="bg-blue-gray-100 overscroll-none font-sans dark:bg-darkTrueGray w-full dark:text-gray-100 text-gray-700 h-full pb-24"
     >
       <section
         class="w-full flex flex-row space-x-4 py-1 px-2 text-xs border-green-600 border-1 mb-2 bg-gray-200 dark:bg-blue-gray-700"

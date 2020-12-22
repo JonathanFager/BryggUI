@@ -32,7 +32,7 @@
             >
               <content
                 id="sensorCard"
-                class="rounded-lg space-y-4 border-2 dark:bg-blue-gray-800 p-2 min-h-20 flex flex-col items-center"
+                class="rounded-lg space-y-4 border-2 dark:bg-blue-gray-800 p-2 min-h-20 flex flex-col"
                 :class="{
                   'col-span-full': fullWidth,
                   'col-span-1': !fullwidth,
@@ -84,7 +84,10 @@
                     </svg>
                   </div>
                 </div>
-                <div id="Main Sensor Value" class="flex flex-row items-center">
+                <div
+                  id="Main Sensor Value"
+                  class="flex flex-row justify-center items-center"
+                >
                   <div id="icon" class="pr-2">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -107,8 +110,31 @@
                     <span>67,3</span><span>&#8451;</span>
                   </div>
                 </div>
-
                 <div
+                  class="flex flex-row justify-end text-xs"
+                >
+                  <div class="cursor-pointer flex flex-row" @click="showMore = !showMore">
+                    <span v-if="showMore">Show less</span>
+                    <span v-else>Show more</span>
+                    <svg
+                      class="w-4 h-4 transform transition duration-200 ease-in-out"
+                      :class="{ 'rotate-90': showMore }"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 5l7 7-7 7"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  v-if="showMore"
                   class="w-full text-xs mx-auto grid gap-x-1 gap-y-3"
                   :class="{
                     'grid-cols-3 sm:grid-cols-3 place-items-center': fullWidth,
@@ -336,5 +362,6 @@ export default class Vessel extends Vue {
   private setToggleRight(isRight: boolean) {
     this.toggleRight = isRight;
   }
+  private showMore = false;
 }
 </script>
