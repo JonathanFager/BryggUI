@@ -58,27 +58,3 @@ export default class Todo extends Vue {
   private todos = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 }
 </script>
-<style scoped>
-/* width */
-::-webkit-scrollbar {
-  height: 6px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  border-radius: 10vh;
-  display: none;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #ddd6fe;
-  border-radius: 10vh;
-  height: 20px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #ddd6fe;
-}
-</style>

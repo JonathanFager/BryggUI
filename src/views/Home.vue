@@ -1,8 +1,8 @@
 <template>
-  <main class="" :class="{ ' dark ': toggleDarkMode }">
+  <main class="h-screen" :class="{ ' dark ': toggleDarkMode }">
     <div
       id="content"
-      class="bg-blue-gray-100 font-sans dark:bg-darkTrueGray w-full dark:text-gray-100 text-gray-700 pb-96"
+      class="bg-blue-gray-100 font-sans dark:bg-darkTrueGray w-full dark:text-gray-100 text-gray-700 h-full"
     >
       <section
         class="w-full flex flex-row space-x-4 py-1 px-2 text-xs border-green-600 border-1 mb-2 bg-gray-200 dark:bg-blue-gray-700"
@@ -24,10 +24,10 @@
         @toggleDarkMode="setDarkMode($event)"
       />
 
-      <div class="container space-y-4 mx-auto">
+      <div class="mx-8 space-y-4">
         <Overview />
         <Todo />
-        <Chart />
+        <!-- <Chart /> -->
 
         <section
           id="vesselGrid"

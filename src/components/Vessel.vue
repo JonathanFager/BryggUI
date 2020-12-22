@@ -109,23 +109,23 @@
                 </div>
 
                 <div
-                  class="w-full text-xs justify-center mx-auto grid gap-x-1 gap-y-3"
+                  class="w-full text-xs mx-auto grid gap-x-1 gap-y-3"
                   :class="{
-                    'grid-cols-3 sm:grid-cols-3': fullWidth,
+                    'grid-cols-3 sm:grid-cols-3 place-items-center': fullWidth,
                     'grid-cols-2 sm:grid-cols-2': !fullWidth,
                   }"
                 >
                   <div class="">
                     <span class="font-normal">Target:</span>
                     <div>
-                      <span class="font-extrabold">72,3</span
+                      <span class="font-extrabold">72,2</span
                       ><span>&#8451;</span>
                     </div>
                   </div>
                   <div class="font-normal">
                     <span>Diff:</span>
                     <div>
-                      <span class="font-extrabold">2,1</span
+                      <span class="font-extrabold">-4,1</span
                       ><span>&#8451;</span>
                     </div>
                   </div>
@@ -218,7 +218,7 @@
                 </div>
 
                 <div
-                  class="w-full text-xs justify-center mx-auto grid gap-x-1 gap-y-3"
+                  class="w-full place-items-center text-xs mx-auto grid gap-x-1 gap-y-3"
                   :class="{
                     'grid-cols-3 sm:grid-cols-3': fullWidth,
                     'grid-cols-2 sm:grid-cols-2': !fullWidth,
@@ -227,14 +227,14 @@
                   <div class="">
                     <span class="font-normal">Target:</span>
                     <div>
-                      <span class="font-extrabold">72,3</span
+                      <span class="font-extrabold">72,2</span
                       ><span>&#8451;</span>
                     </div>
                   </div>
                   <div class="font-normal">
                     <span>Diff:</span>
                     <div>
-                      <span class="font-extrabold">2,1</span
+                      <span class="font-extrabold">-4,1</span
                       ><span>&#8451;</span>
                     </div>
                   </div>

@@ -6,7 +6,7 @@
   />
   <div
     @click="modalVisible = true"
-    class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 w-94 flex-1 items-center rounded-lg py-2 px-4 flex flex-row space-x-2"
+    class="bg-blue-gray-200 dark:bg-blue-gray-800 h-12 w-94 flex-1 items-center rounded-lg py-2 px-4 flex flex-row space-x-2 cursor-pointer"
   >
     <span v-if="completed" class="text-green-600"
       ><svg
