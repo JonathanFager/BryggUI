@@ -328,9 +328,8 @@ import Toggle from "../components/utils/Toggle.vue";
   },
 })
 export default class Vessel extends Vue {
-    @Prop() 
-    issue!: number;
-    fullWidth!: boolean;
+    @Prop() fullWidth!: boolean
+    @Prop() issue!: number
 
   private toggleRight = false;
 
