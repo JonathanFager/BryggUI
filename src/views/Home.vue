@@ -19,7 +19,10 @@
         </button>
       </div>
 
-      <Navbar :isDarkmode="toggleDarkMode" @toggleDarkMode="setDarkMode($event)"/>
+      <Navbar
+        :isDarkmode="toggleDarkMode"
+        @toggleDarkMode="setDarkMode($event)"
+      />
 
       <div class="container space-y-4 mx-auto">
         <div id="overview" class="flex flex-wrap">
@@ -850,175 +853,62 @@
               class="pt-5 items-center flex flex-row justify-between"
             >
               <span class="font-bold text-sm">Show other sensor readings</span>
-              <div
-                class="flex justify-between items-center"
-                @click="toggleActive = !toggleActive"
-              >
-                <div
-                  class="w-10 h-6 flex items-center rounded-full p-1 border-2 border-green-600 duration-300 ease-in-out"
-                  :class="{ 'bg-green-600': toggleActive }"
-                >
-                  <div
-                    class="w-4 h-4 bg-white rounded-full shadow-lg transform duration-300 ease-in-out"
-                    :class="{
-                      'translate-x-4': toggleActive,
-                      'bg-gray-400 dark:bg-gray-100': !toggleActive,
-                    }"
-                  ></div>
-                </div>
-              </div>
+              <Toggle
+                :isRight="toggleRight"
+                @toggleRight="setToggleRight($event)"
+              />
             </header>
-            <div v-if="toggleActive" class="flex flex-row">
+            <div v-if="toggleRight" class="flex flex-row">
               <div class="w-full h-full overflow-x-hidden">
-                  <table class="w-full space-y-2 shadow text-left">
-                    <thead class="text-xs font-medium">
-                      <tr class="border-b">
-                        <th
-                          class="w-1/4"
-                        >
-                          Sensor ID
-                        </th>
-                        <th class="w-1/4">
-                          Type
-                        </th>
-                        <th
-                          class="w-1/4"
-                        >
-                          Reading
-                        </th>
-                        <th
-                          class="w-1/4"
-                        >
-                          Status
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody class="text-xs">
-                      <tr>
-                        <td
-                          class=""
-                        >
-                          Mash Bottom
-                        </td>
-                        <td class="">
-                          DS18B20
-                        </td>
-                        <td
-                          class=""
-                        >
-                          57&#8451;
-                        </td>
-                        <td
-                          class="text-green-400"
-                        >
-                          Ok
-                        </td>
-                      </tr>
-                      <tr class="bg-gray-100">
-                        <td
-                          class=""
-                        >
-                          Mash Bottom
-                        </td>
-                        <td class="">
-                          DS18B20
-                        </td>
-                        <td
-                          class=""
-                        >
-                          57&#8451;
-                        </td>
-                        <td
-                          class="text-green-400"
-                        >
-                          Ok
-                        </td>
-                      </tr>
-                      <tr>
-                        <td
-                          class=""
-                        >
-                          Mash Bottom
-                        </td>
-                        <td class="">
-                          DS18B20
-                        </td>
-                        <td
-                          class=""
-                        >
-                          57&#8451;
-                        </td>
-                        <td
-                          class="text-green-400"
-                        >
-                          Ok
-                        </td>
-                      </tr>
-                      <tr class="bg-gray-100">
-                        <td
-                          class=""
-                        >
-                          Mash Bottom
-                        </td>
-                        <td class="">
-                          DS18B20
-                        </td>
-                        <td
-                          class=""
-                        >
-                          57&#8451;
-                        </td>
-                        <td
-                          class="text-green-400"
-                        >
-                          Ok
-                        </td>
-                      </tr>
-                      <tr>
-                        <td
-                          class=""
-                        >
-                          Mash Bottom
-                        </td>
-                        <td class="">
-                          DS18B20
-                        </td>
-                        <td
-                          class=""
-                        >
-                          57&#8451;
-                        </td>
-                        <td
-                          class="text-green-400"
-                        >
-                          Ok
-                        </td>
-                      </tr>
-                      <tr class="bg-gray-100">
-                        <td
-                          class=""
-                        >
-                          Mash Bottom
-                        </td>
-                        <td class="">
-                          DS18B20
-                        </td>
-                        <td
-                          class=""
-                        >
-                          57&#8451;
-                        </td>
-                        <td
-                          class="text-green-400"
-                        >
-                          Ok
-                        </td>
-                      </tr>
-
-
-                    </tbody>
-                  </table>
-                </div>
+                <table class="w-full space-y-2 shadow text-left">
+                  <thead class="text-xs font-medium">
+                    <tr class="border-b">
+                      <th class="w-1/4">Sensor ID</th>
+                      <th class="w-1/4">Type</th>
+                      <th class="w-1/4">Reading</th>
+                      <th class="w-1/4">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody class="text-xs">
+                    <tr>
+                      <td class="">Mash Bottom</td>
+                      <td class="">DS18B20</td>
+                      <td class="">57&#8451;</td>
+                      <td class="text-green-400">Ok</td>
+                    </tr>
+                    <tr class="bg-gray-100">
+                      <td class="">Mash Bottom</td>
+                      <td class="">DS18B20</td>
+                      <td class="">57&#8451;</td>
+                      <td class="text-green-400">Ok</td>
+                    </tr>
+                    <tr>
+                      <td class="">Mash Bottom</td>
+                      <td class="">DS18B20</td>
+                      <td class="">57&#8451;</td>
+                      <td class="text-green-400">Ok</td>
+                    </tr>
+                    <tr class="bg-gray-100">
+                      <td class="">Mash Bottom</td>
+                      <td class="">DS18B20</td>
+                      <td class="">57&#8451;</td>
+                      <td class="text-green-400">Ok</td>
+                    </tr>
+                    <tr>
+                      <td class="">Mash Bottom</td>
+                      <td class="">DS18B20</td>
+                      <td class="">57&#8451;</td>
+                      <td class="text-green-400">Ok</td>
+                    </tr>
+                    <tr class="bg-gray-100">
+                      <td class="">Mash Bottom</td>
+                      <td class="">DS18B20</td>
+                      <td class="">57&#8451;</td>
+                      <td class="text-green-400">Ok</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
           <div
@@ -1037,11 +927,12 @@
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
 import Navbar from "../components/Navbar.vue";
-// import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
+import Toggle from "../components/utils/Toggle.vue";
 
 @Options({
   components: {
     Navbar,
+    Toggle,
   },
 })
 export default class Home extends Vue {
@@ -1051,8 +942,14 @@ export default class Home extends Vue {
 
   private issue = 3;
 
+  private toggleRight = false;
+
   private setDarkMode(darkMode: boolean) {
     this.toggleDarkMode = darkMode;
+  }
+
+  private setToggleRight(isRight: boolean) {
+    this.toggleRight = isRight;
   }
 
   toggleIssue() {
