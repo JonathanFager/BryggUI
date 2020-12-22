@@ -5,7 +5,7 @@
       class="bg-blue-gray-100 font-sans dark:bg-darkTrueGray w-full dark:text-gray-100 text-gray-700 pb-96"
     >
       <section
-        class="w-full flex flex-row space-x-4 py-2 border-red-200 border-2 bg-gray-300"
+        class="w-full flex flex-row space-x-4 py-1 px-2 text-xs border-green-600 border-1 mb-2 bg-gray-200 dark:bg-blue-gray-700"
       >
         <span>Admin bar:</span>
         <button
