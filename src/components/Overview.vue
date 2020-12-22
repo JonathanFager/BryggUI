@@ -79,12 +79,12 @@ import { Emit, Prop } from "vue-property-decorator";
   emits: ["toggle-dark-mode"],
 }) */
 export default class Overview extends Vue {
-/*   @Prop({ default: false }) isDarkmode = false;
+  /*   @Prop({ default: false }) isDarkmode = false;
 
   @Emit() 
   private toggleDarkMode(): boolean {
     return !this.isDarkmode;
   }
 */
-} 
+}
 </script>

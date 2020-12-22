@@ -50,8 +50,8 @@ import Modal from "../../components/utils/Modal.vue";
 
 @Options({
   components: {
-    Modal,
-  },
+    Modal
+  }
 })
 
 /*

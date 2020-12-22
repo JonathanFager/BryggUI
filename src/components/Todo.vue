@@ -40,8 +40,8 @@ import Todocard from "../components/subcomponents/Todocard.vue";
 
 @Options({
   components: {
-    Todocard,
-  },
+    Todocard
+  }
 })
 
 /* @Options({

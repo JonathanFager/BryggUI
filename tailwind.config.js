@@ -8,19 +8,17 @@ module.exports = {
       //  "hero-pattern": "url('/img/hero-pattern.svg')"
       //}),
       colors: {
-        'darkTrueGray': '#121212',
+        darkTrueGray: "#121212",
         blue: {
-          450: '#5F99F7',
+          450: "#5F99F7"
         },
         blueGray: {
-          950: '#000000'
+          950: "#000000"
         },
-        "blue-gray": colors.trueGray,
+        "blue-gray": colors.trueGray
       }
     }
   },
   variants: {},
-  plugins: [
-    require('tailwind-scrollbar'),
-  ]
+  plugins: [require("tailwind-scrollbar")]
 };

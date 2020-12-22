@@ -64,7 +64,7 @@ import { Options, Vue } from "vue-class-component";
 import { Emit, Prop } from "vue-property-decorator";
 
 @Options({
-  emits: ["toggle-dark-mode"],
+  emits: ["toggle-dark-mode"]
 })
 export default class Navbar extends Vue {
   @Prop({ default: false }) isDarkmode = false;

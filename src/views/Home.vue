@@ -58,15 +58,15 @@ import Toggle from "../components/utils/Toggle.vue";
     Todo,
     Chart,
     Vessel,
-    Toggle,
-  },
+    Toggle
+  }
 })
 export default class Home extends Vue {
   private toggleActive = false;
 
   private modalVisible = false;
 
-  private toggleDarkMode = true;
+  private toggleDarkMode = false;
 
   private issue = 1;
 
