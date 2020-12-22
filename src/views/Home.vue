@@ -2,7 +2,7 @@
   <main class="" :class="{ ' dark ': toggleDarkMode }">
     <div
       id="content"
-      class="bg-blue-gray-100 dark:bg-darkTrueGray w-full dark:text-gray-100 text-gray-700 pb-96"
+      class="bg-blue-gray-100 font-sans dark:bg-darkTrueGray w-full dark:text-gray-100 text-gray-700 pb-96"
     >
       <section
         class="w-full flex flex-row space-x-4 py-2 border-red-200 border-2 bg-gray-300"
@@ -25,19 +25,17 @@
       />
 
       <div class="container space-y-4 mx-auto">
-      
-      <Overview />
-      <Todo />
-      <Chart />
+        <Overview />
+        <Todo />
+        <Chart />
 
-  
-        <section id="vesselGrid"
+        <section
+          id="vesselGrid"
           class="mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4"
         >
           <div v-for="n in 3" :key="n">
-          <Vessel :issue="issue" :fullWidth="fullWidth"/>
+            <Vessel :issue="issue" :fullWidth="fullWidth" />
           </div>
-
         </section>
       </div>
     </div>
@@ -66,7 +64,9 @@ import Toggle from "../components/utils/Toggle.vue";
 export default class Home extends Vue {
   private toggleActive = false;
 
-  private toggleDarkMode = false;
+  private modalVisible = false;
+
+  private toggleDarkMode = true;
 
   private issue = 1;
 
@@ -93,7 +93,5 @@ export default class Home extends Vue {
       this.issue += 1;
     }
   }
-
-  
 }
 </script>

@@ -5,10 +5,7 @@
   >
     <h4 class="text-xl font-bold leading-tight">BryggIO</h4>
     <div class="flex flex-row space-x-4">
-      <button
-        class="focus:outline-none focus:ring-0"
-        @click="toggleDarkMode()"
-      >
+      <button class="focus:outline-none focus:ring-0" @click="toggleDarkMode()">
         <svg
           v-if="toggleDarkMode"
           class="w-6 h-6 hover:text-purple-700"
@@ -72,10 +69,9 @@ import { Emit, Prop } from "vue-property-decorator";
 export default class Navbar extends Vue {
   @Prop({ default: false }) isDarkmode = false;
 
-  @Emit() 
+  @Emit()
   private toggleDarkMode(): boolean {
     return !this.isDarkmode;
   }
-
 }
 </script>

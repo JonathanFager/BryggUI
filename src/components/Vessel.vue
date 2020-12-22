@@ -279,7 +279,7 @@
               <td class="">57&#8451;</td>
               <td class="text-green-400">Ok</td>
             </tr>
-            <tr class="bg-gray-100">
+            <tr class="bg-gray-100 dark:bg-blue-gray-800">
               <td class="">Mash Bottom</td>
               <td class="">DS18B20</td>
               <td class="">57&#8451;</td>
@@ -291,7 +291,7 @@
               <td class="">57&#8451;</td>
               <td class="text-green-400">Ok</td>
             </tr>
-            <tr class="bg-gray-100">
+            <tr class="bg-gray-100 dark:bg-blue-gray-800">
               <td class="">Mash Bottom</td>
               <td class="">DS18B20</td>
               <td class="">57&#8451;</td>
@@ -303,7 +303,7 @@
               <td class="">57&#8451;</td>
               <td class="text-green-400">Ok</td>
             </tr>
-            <tr class="bg-gray-100">
+            <tr class="bg-gray-100 dark:bg-blue-gray-800">
               <td class="">Mash Bottom</td>
               <td class="">DS18B20</td>
               <td class="">57&#8451;</td>
@@ -328,8 +328,8 @@ import Toggle from "../components/utils/Toggle.vue";
   },
 })
 export default class Vessel extends Vue {
-    @Prop() fullWidth!: boolean
-    @Prop() issue!: number
+  @Prop() fullWidth!: boolean;
+  @Prop() issue!: number;
 
   private toggleRight = false;
 

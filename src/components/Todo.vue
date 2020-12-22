@@ -12,18 +12,19 @@
                   <div class="w-3/12 bg-green-500 py-1 rounded-full"></div>
                 </div>
               </div>
-              <div class="pl-5 text-sm">3/{{todos.length}}</div>
+              <div class="pl-5 text-sm">3/{{ todos.length }}</div>
             </div>
           </div>
           <div class="relative">
             <div
               class="bg-gradient-to-l from-white dark:from-blue-gray-900 w-6 right-0 absolute h-full"
             ></div>
-            <div 
-              class="flex flex-row h-full w-full space-x-6 overflow-x-auto overflow-y-none pb-4">
-                <div v-for="n in todos.length" :key="n" class="flex-none">
-                    <Todocard />
-                </div>
+            <div
+              class="flex flex-row h-full w-full space-x-6 overflow-x-auto overflow-y-none pb-4"
+            >
+              <div v-for="n in todos.length" :key="n" class="flex-none">
+                <Todocard />
+              </div>
             </div>
           </div>
         </div>
@@ -47,15 +48,15 @@ import Todocard from "../components/subcomponents/Todocard.vue";
   emits: ["toggle-dark-mode"],
 }) */
 export default class Todo extends Vue {
-/*   @Prop({ default: false }) isDarkmode = false;
+  /*   @Prop({ default: false }) isDarkmode = false;
 
   @Emit() 
   private toggleDarkMode(): boolean {
     return !this.isDarkmode;
   }
 */
-    private todos = [1,2,3,4,5,6,7,8,9,10]
-} 
+  private todos = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+}
 </script>
 <style scoped>
 /* width */
