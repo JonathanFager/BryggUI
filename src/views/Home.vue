@@ -14,7 +14,7 @@
         >
           Issue
         </button>
-        <button class="border px-2 rounded-lg" @click="fullWidth = !fullWidth">
+        <button class="border px-2 rounded-lg" @click="toggleFullWidth()">
           Half/Full-width
         </button>
       </section>
@@ -410,14 +410,14 @@
             </div>
           </div>
         </div>
-        <Chart />
+      <Chart />
 
   
         <section id="vesselGrid"
           class="mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4"
         >
           <div v-for="n in 3" :key="n">
-          <Vessel :issue="issue"/>
+          <Vessel :issue="issue" :fullWidth="fullWidth"/>
           </div>
 
         </section>
@@ -450,6 +450,8 @@ export default class Home extends Vue {
 
   private issue = 1;
 
+  private fullWidth = true;
+
   private toggleRight = false;
 
   private setDarkMode(darkMode: boolean) {
@@ -460,6 +462,10 @@ export default class Home extends Vue {
     this.toggleRight = isRight;
   }
 
+  toggleFullWidth() {
+    this.fullWidth = !this.fullWidth;
+  }
+
   toggleIssue() {
     if (this.issue === 3) {
       this.issue = 1;
@@ -468,7 +474,7 @@ export default class Home extends Vue {
     }
   }
 
-  private fullWidth = true;
+  
 }
 </script>
 
