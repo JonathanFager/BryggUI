@@ -4,7 +4,7 @@
       id="content"
       class="bg-blue-gray-100 overscroll-none font-sans dark:bg-darkTrueGray w-full dark:text-gray-100 text-gray-700 h-full pb-24"
     >
-      <section
+      <!-- <section
         class="w-full flex flex-row space-x-4 py-1 px-2 text-xs border-green-600 border-1 mb-2 bg-gray-200 dark:bg-blue-gray-700"
       >
         <span>Admin bar:</span>
@@ -17,7 +17,7 @@
         <button class="border px-2 rounded-lg" @click="toggleFullWidth()">
           Half/Full-width
         </button>
-      </section>
+      </section> -->
 
       <Navbar
         :isDarkmode="toggleDarkMode"
@@ -62,21 +62,19 @@ import Toggle from "../components/utils/Toggle.vue";
   }
 })
 export default class Home extends Vue {
-  private toggleActive = false;
-
-  private modalVisible = false;
-
+  
   private toggleDarkMode = false;
-
-  private issue = 1;
-
-  private fullWidth = true;
-
-  private toggleRight = false;
 
   private setDarkMode(darkMode: boolean) {
     this.toggleDarkMode = darkMode;
   }
+
+/*
+  private toggleActive = false;
+  private modalVisible = false;
+  private issue = 1;
+  private fullWidth = true;
+  private toggleRight = false;
 
   private setToggleRight(isRight: boolean) {
     this.toggleRight = isRight;
@@ -92,6 +90,7 @@ export default class Home extends Vue {
     } else {
       this.issue += 1;
     }
-  }
+  } 
+  */
 }
 </script>

@@ -30,9 +30,9 @@
               id="6x6grid"
               class="mx-auto grid grid-cols-1 md:grid-cols-2 gap-3"
             >
-             <div v-for="n in 2" :key="n">
-              <Sensorcard />
-            </div>
+              <div v-for="n in 2" :key="n">
+                <Sensorcard />
+              </div>
               <Actorcard />
             </div>
           </div>
@@ -42,12 +42,27 @@
 
     <header
       id="CardSubHeader"
-      class="pt-5 items-center flex flex-row justify-between"
+      class="pt-5 items-center flex flex-row justify-between cursor-pointer" @click="showMore = !showMore"
     >
       <span class="font-bold text-sm">Show other sensor readings</span>
-      <Toggle :isRight="toggleRight" @toggleRight="setToggleRight($event)" />
+        <svg
+          class="w-4 h-4 transform transition duration-200 ease-in-out"
+          :class="{ 'rotate-90': showMore }"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="3"
+            d="M9 5l7 7-7 7"
+          ></path>
+        </svg>
+      <!-- <Toggle :isRight="toggleRight" @toggleRight="setToggleRight($event)" /> -->
     </header>
-    <div v-if="toggleRight" class="flex flex-row">
+    <div v-if="showMore" class="flex flex-row">
       <div class="w-full h-full overflow-x-hidden">
         <table class="w-full space-y-2 shadow text-left">
           <thead class="text-xs font-medium">
@@ -113,8 +128,8 @@ import Toggle from "../components/utils/Toggle.vue";
   components: {
     Sensorcard,
     Actorcard,
-    Toggle
-  }
+    Toggle,
+  },
 })
 export default class Vessel extends Vue {
   @Prop() fullWidth!: boolean;

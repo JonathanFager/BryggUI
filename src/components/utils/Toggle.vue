@@ -17,7 +17,7 @@
 
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
-import { Emit, Prop } from "vue-property-decorator";
+import { Component, Emit, Prop } from "vue-property-decorator";
 
 @Options({
   emits: ["toggle-right"]

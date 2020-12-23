@@ -8742,6 +8742,11 @@ vue-cli-plugin-tailwind@^2.0.1:
     postcss "^7"
     tailwindcss "2.0.1-compat"
 
+vue-enums@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/vue-enums/-/vue-enums-1.0.0.tgz#4501ea8c256a97a29916f61e4d934425d105b1b4"
+  integrity sha512-fCLmWRSzl6O7e9BkQ+aFdrWpvIxLlNIWswjvvCLkzsCQ4/nSCVrRd7Tr+9/651d1FGOe5v3fuPIFVP6Cjsv+0Q==
+
 vue-eslint-parser@^7.0.0, vue-eslint-parser@^7.2.0:
   version "7.2.0"
   resolved "https://registry.npm.taobao.org/vue-eslint-parser/download/vue-eslint-parser-7.2.0.tgz?cache=0&sync_timestamp=1606966106135&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvue-eslint-parser%2Fdownload%2Fvue-eslint-parser-7.2.0.tgz#1e17ae94ca71e617025e05143c8ac5593aacb6ef"
